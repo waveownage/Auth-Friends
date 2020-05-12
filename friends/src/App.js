@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Login from "./components/Login";
 import PrivateRoute from "./components/PrivateRoute";
+import ProtectedPage from "./components/ProtectedPage";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           </li>
         </ul>
         <Switch>
-        
+          <PrivateRoute exact path="/protected" component={ProtectedPage} />
           <Route path="/login" component={Login} />
           <Route component={Login} />
         </Switch>

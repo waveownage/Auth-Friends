@@ -1,12 +1,13 @@
 import React from "react";
-import SmurfForm from "./smurfs-form";
-import List  from "./smurfs";
+import FriendsList from "./FriendsList";
+import FriendsListForm from "./FriendsListForm";
 
-export default function App() {
+
+export default function ProtectedPage() {
     return (
       <div className="App">
-        <SmurfForm/>
-        <List/>
+        <FriendsListForm/>
+        <FriendsList/>
       </div>
     );
   }
