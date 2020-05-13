@@ -10,7 +10,7 @@ const List = (props) => {
             .get('/friends')
             .then(res => setFriendsList(res.data))
             .catch(err => console.log(err))
-    }, []);
+    }, [FriendsList]);
 
     return (
         <>

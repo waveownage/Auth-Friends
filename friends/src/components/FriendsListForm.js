@@ -5,12 +5,12 @@ import { PostFriends } from "../actions/index";
 const FriendsListForm = (props) => {
     const [formState, setFormState] = useState({
         name: "",
-        age: "",
+        age: 100,
         email: "",
-        id: "",
     });
 
     const changeHandler = e => {
+        console.log(formState);
         setFormState({
             ...formState,
             [e.target.name]: e.target.value,
@@ -28,7 +28,6 @@ const FriendsListForm = (props) => {
             name: "",
             age: "",
             email: "",
-            id: "",
         });
     }
 
@@ -44,9 +43,6 @@ const FriendsListForm = (props) => {
 
             <input name="email" placeholder="email" 
             value={formState.email} onChange={changeHandler}/>
-
-            <input name="id" placeholder="id"
-            value={formState.id} onChange={changeHandler}/>
 
             <button type="submit" onClick={props.getFriend}>Add New Friend</button>
         </form>
