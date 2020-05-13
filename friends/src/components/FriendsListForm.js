@@ -48,7 +48,7 @@ const FriendsListForm = (props) => {
             <input name="id" placeholder="id"
             value={formState.id} onChange={changeHandler}/>
 
-            <button type="submit" onClick={props.getFriends}>Add New Friend</button>
+            <button type="submit" onClick={props.getFriend}>Add New Friend</button>
         </form>
 
     );
