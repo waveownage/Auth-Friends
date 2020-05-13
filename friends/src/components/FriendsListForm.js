@@ -6,7 +6,7 @@ const FriendsListForm = (props) => {
     const [formState, setFormState] = useState({
         name: "",
         age: "",
-        height: "",
+        email: "",
         id: "",
     });
 
@@ -27,14 +27,14 @@ const FriendsListForm = (props) => {
         setFormState({
             name: "",
             age: "",
-            height: "",
+            email: "",
             id: "",
         });
     }
 
     return (
         <form onSubmit={submitHandler}>
-            <h1>The Smurf Crew</h1>
+            <h1>Friends List</h1>
 
             <input name="name" placeholder="name" 
             value={formState.name} onChange={changeHandler}/>
@@ -48,7 +48,7 @@ const FriendsListForm = (props) => {
             <input name="id" placeholder="id"
             value={formState.id} onChange={changeHandler}/>
 
-            <button type="submit" onClick={props.getFriends}>Add New Smurf</button>
+            <button type="submit" onClick={props.getFriends}>Add New Friend</button>
         </form>
 
     );

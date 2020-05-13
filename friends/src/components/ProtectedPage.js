@@ -1,14 +1,18 @@
 import React from "react";
-import FriendsList from "./FriendsList";
+import List from "./FriendsList";
 import FriendsListForm from "./FriendsListForm";
 
 
-export default function ProtectedPage() {
+class ProtectedPage extends React.Component {
+    render() {
     return (
-      <div className="App">
+      <div>
         <FriendsListForm/>
-        <FriendsList/>
+        <List/>
       </div>
     );
+    }
   }
+
+  export default ProtectedPage;
   
